@@ -1,0 +1,25 @@
+# WordPress Docker Developer Environment
+
+This is an easy to start environment designed for developing for WordPress. It spins up PHP, MySQL, and Nginx in an automated way.
+
+## Usage
+
+### Quickstart
+
+1. Download [WordPress](https://wordpress.org/latest.zip) and extract it into the top level of this Git repository. Name the directory wordpress.
+
+2. Run `docker-compose up -d --build` to build and start the server in the background. This runs WordPress on port 80 and 443.
+
+### Close
+
+- Run `docker-compose down`
+- To do a reset: `docker-compose down --volumes`
+
+### wp-cli
+
+- To use wp-cli: `docker-compose run --rm wp user list`
+
+### HTTPS
+ - Create certs using [mkcert](https://github.com/FiloSottile/mkcert) and place them into the nginx/certs directory and name the files `cert.pem` and `cert-key.pem`
+
+
