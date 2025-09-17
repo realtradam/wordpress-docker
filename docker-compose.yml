@@ -8,8 +8,8 @@ services:
       - php
       - mysql
     ports:
-      - 80:80
-      - 443:443
+      - 3001:80
+#      - 443:443
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.wordpress.rule=Host(`yourdomain.com`)"
