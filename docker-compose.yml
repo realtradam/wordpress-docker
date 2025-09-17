@@ -46,7 +46,8 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    networks: dokploy-network
+    networks:
+      - dokploy-network
     volumes:
       - ./wordpress:/var/www/html
     entrypoint: ['wp', '--allow-root']
