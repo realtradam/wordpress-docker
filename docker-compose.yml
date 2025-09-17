@@ -7,9 +7,9 @@ services:
     depends_on:
       - php
       - mysql
-#    ports:
-#      - 80:80
-#      - 443:443
+    ports:
+      - 80:80
+      - 443:443
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.wordpress.rule=Host(`yourdomain.com`)"
